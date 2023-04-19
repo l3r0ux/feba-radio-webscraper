@@ -2,8 +2,11 @@ const express = require('express')
 const app = express()
 const axios = require('axios')
 const cheerio = require('cheerio');
+const cors = require('cors');
 
 const port = process.env.PORT || 3000
+
+app.use(cors());
 
 app.get('/get-daily-prayer', async (req, res) => {
     const prayerParam = req.query.currentDate

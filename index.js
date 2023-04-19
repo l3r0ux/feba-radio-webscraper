@@ -3,7 +3,7 @@ const app = express()
 const axios = require('axios')
 const cheerio = require('cheerio');
 
-const port = 3000
+const port = process.env.PORT || 3000
 
 app.get('/get-daily-prayer', async (req, res) => {
     const prayerParam = req.query.currentDate
